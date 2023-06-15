@@ -573,7 +573,6 @@ def login():
 def logout():
     session.clear()
     params = {'returnTo': url_for('home', _external=True), 'client_id': AUTH0_CLIENT_ID}
-#    return redirect('{}/v2/logout?{}'.format(auth0.api_base_url, urlencode(params)))
     return redirect('{}/v2/logout?{}'.format(AUTH0_AUTH_URL, urlencode(params)))
 
 
@@ -1007,54 +1006,6 @@ def create_saml_connection():
         return render_template('dash/connection_saml.html', form=form, data=conn_data)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##############################################################################
 ##############################################################################
 ##
@@ -1162,34 +1113,6 @@ def create_okta_connection():
     else:
         conn_data = {}
         return render_template('dash/connection_okta.html', form=form, data=conn_data)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ##############################################################################
