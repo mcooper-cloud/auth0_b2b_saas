@@ -1,0 +1,12 @@
+flask
+python-dotenv
+requests
+six
+authlib
+boto3
+WTForms
+python-jose
+Flask-WTF
+email-validator
+Flask-Bootstrap
+PyJWT

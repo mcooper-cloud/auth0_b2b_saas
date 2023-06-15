@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R0E1GYFFR"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
+            gtag("config", "G-4R0E1GYFFR");
+        </script>
+
+        {%- auth0:head -%}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <!-- font awesome from BootstrapCDN -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+            body {
+                text-align : center;
+            }
+
+            .wrapper{
+                background-image: url(https://fctest.auth0.pintail.rocks/static/img/box.png);
+                background-repeat: no-repeat;
+                background-position-x:  -750px;
+                background-position-y:  -10px;
+            }
+        </style>
+        <title>{{ prompt.screen.texts.pageTitle }}</title>
+    </head>
+    <body class="_widget-auto-layout">
+        <div class="main">
+            <div class="container-fluid wrapper">
+                {%- auth0:widget -%}
+            </div>
+        </div>
+    </body>
+</html>
